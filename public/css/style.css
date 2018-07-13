@@ -8,57 +8,40 @@ body {
   border: 0;
 }
 
-#website-header {
-  padding-top: 2rem;
-  padding-left: 1.5rem;
-  font-size: 80px;
-  letter-spacing: 20px;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 31;
-  text-align: center;
-  width: 95%;
+* {
+    color: black;
 }
 
-#splitpage-container {
-  height: 100%;
-  display: grid;
-  grid-template-columns: auto auto;
-  z-index: 0;
-}
-
-#developer-splitpage {
-  background-color: blue;
-}
-
-#photographer-splitpage {
-  background-color: red;
-}
-
-.splitpage-content {
-  display: block;
-  position: absolute;
-  top: 15rem;
-  width: 50%;
-  text-align: center;
-}
-
-.splitpage-content h1 {
-  margin-bottom: 10rem;
-  letter-spacing: 3px;
-}
-
-.splitpage-content a {
-  padding: 1rem 2rem 1rem 2rem;
-  background-color: black;
-  color: white;
+a {
   text-decoration: none;
-  border-radius: 3px;
-  transition: 0.3s;
 }
 
-.splitpage-content a:hover {
-  padding: 1.2rem 2.2rem 1.2rem 2.2rem;
-  transition: 0.3s;
+#navbar {
+  padding: 1.5em 10em 3em 10em;
+  overflow: hidden;
+}
+
+#navbar-name {
+  padding-right: 10em;
+  float: left;
+  display: block;
+  text-align: center;
+  margin: none;
+  text-decoration: none;
+}
+
+#navbar-links {
+  margin: auto;
+}
+
+.navbar-link {
+  font-size: 115%;
+  padding: 0 1em 0 1em;
+  float: left;
+  display: block;
+  text-align: center;
+}
+
+#navbar-actions {
+  float: right
 }
