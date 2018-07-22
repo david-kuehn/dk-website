@@ -45,3 +45,16 @@ a {
 #navbar-actions {
   float: right
 }
+
+#top-photo-box {
+  margin: 0;
+  text-align: center;
+}
+
+#tagline {
+  padding-top: 5em;
+}
+
+#aboutme-box {
+  padding: 3em 0 3em 0;
+}

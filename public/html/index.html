@@ -19,6 +19,34 @@
         <a class="navbar-link" id="contact-navbar" href="#">Contact</a>
       </div>
     </div>
+    
+    <div id="top-photo-box">
+      <img id="top-photo" />
+      
+      <script>
+        const topPhoto = document.getElementById('top-photo');
+        let randIndex = GetRandomInt(1, 5);
+        
+        function GetRandomInt(min, max) {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+        
+        topPhoto.src = "img/photo/img" + randIndex + ".jpg"; 
+      </script>
+      
+      <h1 id="tagline">
+        Full-time student-athlete passionate for software development and photography.
+      </h1>
+      
+      <div id="aboutme-box">
+        <h2>
+          About Me
+        </h2>
+        <img src="img/icon/down.png" width="80" height="80" />
+      </div>
+    </div>
 
   </body>
 </html>
