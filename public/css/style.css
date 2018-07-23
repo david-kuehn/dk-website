@@ -1,5 +1,5 @@
 html {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -15,10 +15,12 @@ a {
 #navbar {
   padding: 1.5em 10em 3em 10em;
   overflow: hidden;
+  position: sticky;
+  top: 0;
 }
 
 #navbar-name {
-  padding-right: 9em;
+  padding-right: 8em;
   float: left;
   display: block;
   text-align: center;
@@ -45,18 +47,15 @@ a {
 }
 
 #top-photo-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin: 0;
+  float: left;
+  margin-top: -6.1em;
   text-align: center;
   z-index: -1;
   color: white;
 }
 
 #top-photo {
-  height: 100vh;
+  height: 101vh;
   width: 100vw;
 }
 
@@ -69,15 +68,10 @@ a {
 }
 
 #tagline {
+  font-size: 200%;
   padding-top: 5em;
 }
 
 #aboutme-down-box {
-  padding: 3em 0 3em 0;
-}
-
-#aboutme-box {
-  position: absolute;
-  bottom: -10%;
-  left: 0;
+  padding: 3em 0 1em 0;
 }
