@@ -20,7 +20,7 @@ a {
 }
 
 #navbar-name {
-  padding-right: 8em;
+  margin-right: 8em;
   float: left;
   display: block;
   text-align: center;
@@ -48,14 +48,13 @@ a {
 
 #top-photo-box {
   float: left;
-  margin-top: -6.1em;
   text-align: center;
   z-index: -1;
   color: white;
 }
 
 #top-photo {
-  height: 101vh;
+  height: 100vh;
   width: 100vw;
 }
 

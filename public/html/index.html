@@ -2,7 +2,9 @@
   <head>
     <title>David Kuehn</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
+  </head>
+  
   <body>
     <div id="navbar">
       <a class="navbar-link" id="navbar-name" href="/">David Kuehn</a>
@@ -42,5 +44,15 @@
       </h1>
     </div>
 
+    <!-- Dynamically sets the margin of the top-photo-box based on the navbar -->
+    <script>
+      let topPhotoBox = document.getElementById('top-photo-box');
+      let navbar = document.getElementById('navbar');
+      let testText = document.getElementById('tagline');
+      
+      // Set the margin-top of the top-photo-box to the inverse of the navbar's height
+      topPhotoBox.style.marginTop = (0 - navbar.offsetHeight) + 'px';
+    </script> 
+    
   </body>
 </html>
