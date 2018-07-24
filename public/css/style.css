@@ -12,6 +12,11 @@ a {
   text-decoration: none;
 }
 
+#page-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
 #navbar {
   padding: 1.5em 10em 3em 10em;
   overflow: hidden;
@@ -48,6 +53,24 @@ a {
   color: white;
 }
 
+#navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-social {
+  height: 30px;
+  width: 30px;
+  padding: 0 0.5em;
+  filter: brightness(0) invert(1);
+}
+
+#navbar-twitter {
+  height: 25px;
+  width: 25px;
+  margin-right: 1.5em;
+}
+
 #contact-navbar {
   float: right
 }
@@ -79,4 +102,27 @@ a {
 
 #aboutme-down-box {
   padding: 3em 0 1em 0;
+}
+
+#aboutme-content {
+  padding: 5em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#aboutme {
+  height: 250px; /* Add media query here */
+  width: 560px;
+  float: left;
+  line-height: 1.5;
+  font-size: 105%;
+  margin-left: 5em;
+}
+
+#profile-pic {
+  height: 250px;
+  width: 250px;
+  max-width: 300px;
+  max-height: 300px;
 }
