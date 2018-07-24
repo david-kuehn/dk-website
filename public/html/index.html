@@ -4,25 +4,23 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
   </head>
-  
+
   <body>
     <div id="navbar">
       <a class="navbar-link" id="navbar-name" href="/">David Kuehn</a>
-      
+
       <div id="navbar-links">
         <a class="navbar-link" href="/software">Software</a>
         <a class="navbar-link" href="/photography">Photography</a>
         <a class="navbar-link" href="#">Freelance</a>
       </div>
-      
-      <div id="navbar-actions">
-        <a class="navbar-link" id="contact-navbar" href="#">Contact</a>
-      </div>
+
+      <a class="navbar-link" id="contact-navbar" href="#">Contact</a>
     </div>
-    
+
     <div id="top-photo-box">
       <img id="top-photo" src="img/photo/img1_alt.jpg" />
-      
+
       <div id="photo-box-content">
         <p id="tagline">
           Full-time student-athlete passionate for software development and photography.
@@ -35,9 +33,9 @@
           <img src="img/icon/down.png" width="80" height="80" style="filter: brightness(0) invert(1);" />
         </div>
       </div>
-      
+
     </div>
-    
+
     <div id="aboutme-box">
       <h1 id="aboutme-header">
         ABOUT ME
@@ -49,10 +47,10 @@
       let topPhotoBox = document.getElementById('top-photo-box');
       let navbar = document.getElementById('navbar');
       let testText = document.getElementById('tagline');
-      
+
       // Set the margin-top of the top-photo-box to the inverse of the navbar's height
       topPhotoBox.style.marginTop = (0 - navbar.offsetHeight) + 'px';
-    </script> 
-    
+    </script>
+
   </body>
 </html>
