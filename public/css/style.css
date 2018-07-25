@@ -27,7 +27,7 @@ a {
   justify-content: center;
   align-items: center;
   z-index: 5;
-  transition: background-color .5s, height .5s;
+  transition: background-color .3s;
 }
 
 #navbar-name {
@@ -80,7 +80,6 @@ a {
 
 .scrolled-navbar {
   background-color: white;
-  height: 65px;
 }
 
 #top-photo-box {

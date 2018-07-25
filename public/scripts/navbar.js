@@ -4,7 +4,7 @@ function configureNavbar () {
   // When the window is scrolled
   $(window).scroll(function () {
     // If the window has been scrolled more than 50px
-    if ($(this).scrollTop() > 50) {
+    if ($(this).scrollTop() > 90) {
       // Assign the navbar a new style
       $('#navbar').addClass('scrolled-navbar');
 
@@ -14,7 +14,7 @@ function configureNavbar () {
     }
 
     // If the scroll has been reduced
-    else if ($(this).scrollTop() < 50) {
+    else if ($(this).scrollTop() < 90) {
       // Remove the style
       $('#navbar').removeClass('scrolled-navbar');
 
