@@ -18,14 +18,16 @@ a {
 }
 
 #navbar {
-  padding: 1.5em 10em 3em 10em;
+  padding: 0 7.5em;
+  height: 100px;
   overflow: hidden;
   position: sticky;
   top: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   z-index: 5;
+  transition: background-color .5s, height .5s;
 }
 
 #navbar-name {
@@ -63,6 +65,7 @@ a {
   width: 30px;
   padding: 0 0.5em;
   filter: brightness(0) invert(1);
+  z-index: 6;
 }
 
 #navbar-twitter {
@@ -73,6 +76,11 @@ a {
 
 #contact-navbar {
   float: right
+}
+
+.scrolled-navbar {
+  background-color: white;
+  height: 65px;
 }
 
 #top-photo-box {
@@ -113,7 +121,7 @@ a {
 
 #aboutme {
   height: 250px; /* Add media query here */
-  width: 560px;
+  width: 590px;
   float: left;
   line-height: 1.5;
   font-size: 105%;
