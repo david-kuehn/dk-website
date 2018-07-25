@@ -5,10 +5,15 @@
 
     <title>David Kuehn</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/panelbuttons.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
 
     <!-- Link navbar helper -->
     <script src="scripts/navbar.js"></script>
+
+    <!-- Link button helper -->
+    <script src="scripts/panelbuttons.js"></script>
   </head>
 
   <body>
@@ -16,8 +21,8 @@
       <a class="navbar-link" id="navbar-name" href="/">David Kuehn</a>
 
       <div id="navbar-links">
-        <a class="navbar-link" href="/software">Software</a>
-        <a class="navbar-link" href="/photography">Photography</a>
+        <a class="navbar-link" href="#software-box">Software</a>
+        <a class="navbar-link" href="#">Photography</a>
         <a class="navbar-link" href="#">Freelance</a>
       </div>
 
@@ -62,6 +67,33 @@
              web development. I created this website to share my
              interests and offer my services to the public.
           </p>
+        </div>
+      </div>
+
+      <div id="software-box">
+        <div id="software-content">
+          <h1>Software</h1>
+
+          <div id="panels-container">
+            <div class="software-panel">
+              <h1>C#</h1>
+              <p>3 years first in the Unity Engine and then building a custom programming language</p>
+            </div>
+
+            <div class="software-panel">
+              <h1>Web</h1>
+              <p>2 years experience with front-end technologies such as HTML, CSS, Javascript, and jQuery, as well as backend frameworks Node.js and Express.js</p>
+            </div>
+
+            <div class="software-panel">
+              <h1>iOS / Swift</h1>
+              <p>1 year building a puzzle app using Unity and Xcode, as well as unreleased apps written in Swift</p>
+            </div>
+          </div>
+
+          <div class="panel-button-container">
+            <a class="panel-button" id="github-button" href="https://github.com/david-kuehn" target="_blank">View GitHub Profile</a>
+          </div>
         </div>
       </div>
 

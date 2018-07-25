@@ -1,0 +1,13 @@
+.panel-button-container {
+  margin-top: 4em;
+  text-align: center;
+}
+
+#github-button {
+  color: white;
+  background-color: #282828;
+  padding: 1em 3em;
+  border:1px solid white;
+  border-radius: 6px;
+  transition: background-color .3s;
+}
