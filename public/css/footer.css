@@ -1,0 +1,26 @@
+.default-footer {
+  background-color: white;
+}
+
+.footer-content-container {
+  margin: 3em 10em;
+  text-align: center;
+}
+
+.footer-email-preface {
+  font-size: 110%;
+}
+
+.footer-email {
+  font-size: 110%;
+}
+
+.footer-socials-container {
+  margin-top: 2em;
+}
+
+.footer-social {
+  height: 45px;
+  width: 45px;
+  margin: 0 0.2em;
+}
