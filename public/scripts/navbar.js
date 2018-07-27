@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // When a link in the navbar is clicked
-  $('a').on('click', function (event) {
+  $('.navbar-link').on('click', function (event) {
     // Don't do the default on-click action
     event.preventDefault();
 
