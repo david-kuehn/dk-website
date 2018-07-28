@@ -1,0 +1,30 @@
+#store-header {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.store-header-element {
+  padding: 0 1em;
+  margin: 0;
+}
+
+.store-header-separator {
+  font-size: 150%;
+  margin: 0;
+}
+
+#store-body-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.side-arrow {
+  height: 75px;
+  width: 75px;
+}
+
+#right-arrow {
+  transform: rotate(180deg);
+}

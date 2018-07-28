@@ -15,6 +15,11 @@
 
 .footer-email {
   font-size: 110%;
+  color: white;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+  padding-bottom: .05em;
 }
 
 .footer-socials-container {
