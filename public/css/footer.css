@@ -1,9 +1,11 @@
 .default-footer {
-  background-color: white;
+  background-color: #282828;
+  color: white;
 }
 
 .footer-content-container {
-  margin: 3em 10em;
+  margin: 0 10em;
+  padding: 3em 0 1.5em 0;
   text-align: center;
 }
 

@@ -7,7 +7,7 @@ $(document).ready(function () {
     // Smooth scroll
     $('html, body').animate(
       // Scroll to the normal href of the link
-      {scrollTop: $( $(this).attr('href') ).offset().top}, 'slow');
+      {scrollTop: $( $(this).attr('href') ).offset().top - $('#navbar').height()}, 'slow');
     return false;
   });
 

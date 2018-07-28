@@ -86,9 +86,19 @@ a {
 
 .software-panel {
   padding: 0 2em;
-}
-
-.software-panel {
   font-size: 110%;
   line-height: 1.5;
+}
+
+.notable-project {
+  color: #c6c6cc;
+}
+
+.np-link {
+  color: #c6c6cc;
+  text-decoration: underline;
+}
+
+#photography-content {
+  margin: 3em 10em;
 }
