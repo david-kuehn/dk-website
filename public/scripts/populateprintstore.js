@@ -17,6 +17,9 @@ function createStoreItem (item, index) {
 
   // Creates and adds item's details to item container
   // TODO: add rest of item details
-  let itemTitle = $('<p></p>').text(item.title);
+  let itemPreview = $(`<img class="item-preview" src="${item.previewImgURL}" />`)
+  $(`#store-item-${index}`).append(itemPreview);
+
+  let itemTitle = $('<p class="item-title"></p>').text(item.title);
   $(`#store-item-${index}`).append(itemTitle);
 }

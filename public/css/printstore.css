@@ -1,3 +1,7 @@
+#print-store-container {
+  margin-top: 5em;
+}
+
 #store-header {
   display: flex;
   justify-content: center;
@@ -15,6 +19,7 @@
 }
 
 #store-body-container {
+  margin: 0 -10em;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -27,4 +32,23 @@
 
 #right-arrow {
   transform: rotate(180deg);
+}
+
+#store-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+.store-item {
+  padding: 0 3em;
+  text-align: center;
+}
+
+.item-preview {
+  height: auto;
+  width: auto;
+  max-width: 200px;
+  max-height: 200px;
 }
