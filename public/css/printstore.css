@@ -38,6 +38,10 @@
   overflow: auto;
 }
 
+#store-content::-webkit-scrollbar {
+    display: none; 
+}
+
 .store-item {
   text-align: center;
   min-height: 300px;

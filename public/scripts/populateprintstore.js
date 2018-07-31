@@ -8,6 +8,8 @@ $(document).ready(function() {
       createStoreItem(data[i], i);
     }
   });
+
+  controlScroll();
 });
 
 function createStoreItem (item, index) {
@@ -15,11 +17,11 @@ function createStoreItem (item, index) {
   let newItem = $(`<div class="store-item" id="store-item-${index}"></div>`);
   $('#store-content').append(newItem);
 
-  let itemLink = $('<a class="item-link" href="#"></a>')
+  let itemLink = $('<a class="item-link" href="#"></a>');
   $(`#store-item-${index}`).append(itemLink);
 
   // Creates and adds item's properties to item container
-  let itemPreview = $(`<img class="item-preview" src="${item.previewImgURL}" />`)
+  let itemPreview = $(`<img class="item-preview" src="${item.previewImgURL}" />`);
   $(`#store-item-${index} > .item-link`).append(itemPreview);
 
   // Create empty div for print's details below preview
@@ -29,7 +31,7 @@ function createStoreItem (item, index) {
   // Check if item is landscape
   if (item.landscape == "true") {
     // Center the preview
-    itemPreview.css({'margin-top': '50px'})
+    itemPreview.css({'margin-top': '50px'});
     itemDetailsDiv.css({'padding-top': '60px'});
   }
 
@@ -38,4 +40,28 @@ function createStoreItem (item, index) {
 
   let itemPrice = $(`<p class="item-price">from $${item.price}</p>`);
   $(`#store-item-${index} > .item-link >.item-details`).append(itemPrice);
+}
+
+function controlScroll () {
+  const contentPanel = $('#store-content');
+  const leftButton = $('#left-arrow-link');
+  const rightButton = $('#right-arrow-link');
+
+  leftButton.on('click', function(event) {
+    event.preventDefault();
+
+    contentPanel.scroll();
+    contentPanel.animate({
+      scrollLeft: contentPanel.scrollLeft() - $("#store-item-1").width()
+    }, 500);
+  });
+
+  rightButton.on('click', function(event) {
+    event.preventDefault();
+
+    contentPanel.scroll();
+    contentPanel.animate({
+      scrollLeft: contentPanel.scrollLeft() + $("#store-item-1").width()
+    }, 500);
+  });
 }
