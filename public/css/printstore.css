@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 3em;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .store-item {
@@ -48,12 +48,22 @@
   align-items: center;
 }
 
+.item-link {
+  transition: background-color 0.2s;
+  padding: 0.5em 5em;
+}
+
+.item-link:hover {
+  background-color: #cfcfd1;
+}
+
 .item-preview {
   box-shadow: 2px 2px 1px grey;
 }
 
 .item-details {
   padding-top: 10px;
+  color: black;
 }
 
 .item-details p {
