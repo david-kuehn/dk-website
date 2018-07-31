@@ -15,11 +15,27 @@ function createStoreItem (item, index) {
   let newItem = $(`<div class="store-item" id="store-item-${index}"></div>`);
   $('#store-content').append(newItem);
 
-  // Creates and adds item's details to item container
-  // TODO: add rest of item details
+  let itemLink = $('<a class="item-link" href="#"></a>')
+  $(`#store-item-${index}`).append(itemLink);
+
+  // Creates and adds item's properties to item container
   let itemPreview = $(`<img class="item-preview" src="${item.previewImgURL}" />`)
-  $(`#store-item-${index}`).append(itemPreview);
+  $(`#store-item-${index} > .item-link`).append(itemPreview);
+
+  // Create empty div for print's details below preview
+  let itemDetailsDiv = $('<div class="item-details"></div>');
+  $(`#store-item-${index} > .item-link`).append(itemDetailsDiv);
+
+  // Check if item is landscape
+  if (item.landscape == "true") {
+    // Center the preview
+    itemPreview.css({'margin-top': '50px'})
+    itemDetailsDiv.css({'padding-top': '60px'});
+  }
 
   let itemTitle = $('<p class="item-title"></p>').text(item.title);
-  $(`#store-item-${index}`).append(itemTitle);
+  $(`#store-item-${index} > .item-link >.item-details`).append(itemTitle);
+
+  let itemPrice = $(`<p class="item-price">from $${item.price}</p>`);
+  $(`#store-item-${index} > .item-link >.item-details`).append(itemPrice);
 }

@@ -1,7 +1,3 @@
-#print-store-container {
-  margin-top: 5em;
-}
-
 #store-header {
   display: flex;
   justify-content: center;
@@ -39,16 +35,35 @@
   align-items: center;
   justify-content: center;
   margin-top: 3em;
+  overflow: hidden;
 }
 
 .store-item {
-  padding: 0 3em;
   text-align: center;
+  min-height: 300px;
+  min-width: 33.333%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-preview {
-  height: auto;
-  width: auto;
-  max-width: 200px;
-  max-height: 200px;
+  box-shadow: 2px 2px 1px grey;
+}
+
+.item-details {
+  padding-top: 10px;
+}
+
+.item-details p {
+  margin: 0;
+}
+
+.item-title {
+  font-size: 110%;
+}
+
+.item-price {
+  padding-top: 10px;
 }
