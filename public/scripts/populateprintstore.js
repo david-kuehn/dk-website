@@ -43,25 +43,57 @@ function createStoreItem (item, index) {
 }
 
 function controlScroll () {
+  // Obtain and store necessary components
   const contentPanel = $('#store-content');
   const leftButton = $('#left-arrow-link');
   const rightButton = $('#right-arrow-link');
 
+  if (contentPanel.scrollLeft() == 0) {
+    leftButton.addClass('disabled-arrow');
+  }
+
+  // On click of the left arrow button
   leftButton.on('click', function(event) {
+    // Prevent default link
     event.preventDefault();
 
+    // Animate the scrollbar to move left the width of one item
     contentPanel.scroll();
     contentPanel.animate({
       scrollLeft: contentPanel.scrollLeft() - $("#store-item-1").width()
-    }, 500);
+    }, 500, function() {
+      // If it is scrolled all the way left
+      if (contentPanel.scrollLeft() == 0) {
+        leftButton.addClass('disabled-arrow');
+      }
+
+      // If it's not scrolled all the way right
+      if (contentPanel.scrollLeft() != (contentPanel[0].scrollWidth - contentPanel.width())) {
+        rightButton.removeClass('disabled-arrow');
+      }
+    });
   });
 
+  // On click of the right arrow button
   rightButton.on('click', function(event) {
+    // Prevent default link
     event.preventDefault();
 
+    // Animate the scrollbar to move left the width of one item
     contentPanel.scroll();
     contentPanel.animate({
       scrollLeft: contentPanel.scrollLeft() + $("#store-item-1").width()
-    }, 500);
+    }, 500, function() {
+        // If it's not scrolled all the way left
+        if (contentPanel.scrollLeft() != 0) {
+          leftButton.removeClass('disabled-arrow');
+        }
+
+        // If it is scrolled all the way right
+        if (contentPanel.scrollLeft() >= (contentPanel[0].scrollWidth - (contentPanel.width() + 15))) {
+          rightButton.addClass('disabled-arrow');
+        }
+    });
+
   });
 }

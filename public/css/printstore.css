@@ -26,6 +26,11 @@
   width: 75px;
 }
 
+.disabled-arrow {
+  pointer-events: none;
+  filter: invert(50%);
+}
+
 #right-arrow {
   transform: rotate(180deg);
 }
@@ -38,8 +43,9 @@
   overflow: auto;
 }
 
+/* Webkit only */
 #store-content::-webkit-scrollbar {
-    display: none; 
+    display: none;
 }
 
 .store-item {
