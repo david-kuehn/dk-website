@@ -26,9 +26,13 @@
   width: 75px;
 }
 
+.side-arrow-link {
+  transition: filter 0.3s;
+}
+
 .disabled-arrow {
   pointer-events: none;
-  filter: invert(50%);
+  filter: invert(65%);
 }
 
 #right-arrow {
@@ -60,7 +64,7 @@
 
 .item-link {
   transition: background-color 0.2s;
-  padding: 0.5em 5em;
+  padding: 0.5em 2em;
 }
 
 .item-link:hover {
@@ -86,4 +90,8 @@
 
 .item-price {
   padding-top: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .store-item {width: 100%;}
 }

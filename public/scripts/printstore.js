@@ -89,7 +89,7 @@ function controlScroll () {
           leftButton.removeClass('disabled-arrow');
         }
 
-        // If it is scrolled all the way right
+        // If it is scrolled all the way right (with a buffer of 15px)
         if (contentPanel.scrollLeft() >= (contentPanel[0].scrollWidth - (contentPanel.width() + 15))) {
           rightButton.addClass('disabled-arrow');
         }
