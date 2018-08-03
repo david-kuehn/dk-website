@@ -3,7 +3,6 @@ $(document).ready(function () {
   // When the navbar collapse toggle is clicked
   $('.navbar-toggler').click(function() {
     isToggled = !isToggled;
-    console.log(isToggled);
 
     // If the toggle is open
     if (isToggled == true) {
@@ -13,7 +12,7 @@ $(document).ready(function () {
 
       // Change the color of all navbar text and icons
       $('.navbar-social').css({'filter': 'brightness(0)'});
-      console.log('should be added')
+      $('.navbar-toggler-icon').css({'filter': 'brightness(0)'});
     } else {
       // Remove the style
       $('.navbar').removeClass('scrolled-navbar');
@@ -21,6 +20,7 @@ $(document).ready(function () {
 
       // Change the color of all navbar text and icons
       $('.navbar-social').css({'filter': 'brightness(0) invert(1)'});
+      $('.navbar-toggler-icon').css({'filter': 'brightness(0) invert(1)'});
     }
   });
 

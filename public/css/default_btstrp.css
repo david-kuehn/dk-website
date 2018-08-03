@@ -2,7 +2,10 @@ body {
   font-family: 'Montserrat', sans-serif !important;
 }
 
-#top-photo {
+#top-photo-box {
+  background: url(../img/photo/img1_alt.jpg);
   height: 100vh;
-  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

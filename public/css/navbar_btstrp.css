@@ -23,8 +23,11 @@
   color: white;
 }
 
+/* KEEP */
 .navbar-brand:hover {
+  color: white;
 }
+/* KEEP */
 
 .navbar-nav li a {
    color: white;
@@ -48,4 +51,9 @@
         max-width: 1678px;
         height: 84px;
     }
+}
+
+.navbar-toggler-icon {
+  background: url(../img/icon/menu.svg);
+  filter: brightness(0) invert(1);
 }
