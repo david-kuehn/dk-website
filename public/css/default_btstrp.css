@@ -8,4 +8,48 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
+}
+
+.tagline {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  font-size: 150%;
+}
+
+.aboutme-down p {
+  margin: 0;
+}
+
+.aboutme-down img {
+  height: 50px;
+  width: 50px;
+}
+
+.aboutme-down {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  font-size: 120%;
+}
+
+@media only screen and (min-width : 768px) {
+  .tagline {
+    font-size: 200%;
+    top: 50%;
+  }
+
+  .aboutme-down {
+    font-size: 160%;
+  }
+
+  .aboutme-down img {
+    height: 80px;
+    width: 80px;
+  }
 }
