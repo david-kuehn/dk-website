@@ -1,11 +1,5 @@
-<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Get Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Get jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -123,14 +117,14 @@
             </div>
 
             <div id="store-body-container">
-              <a class="side-arrow-link" id="left-arrow-link" href="#"><img class="side-arrow" id="left-arrow" src="img/icon/sidearrow.svg" /></a>
+              <a id="left-arrow-link" href="#"><img class="side-arrow" id="left-arrow" src="img/icon/sidearrow.svg" /></a>
 
               <div id="store-content">
                 <!-- Populate with sliders -->
               </div>
 
               <!-- End Store Content -->
-              <a class="side-arrow-link" id="right-arrow-link" href="#"><img class="side-arrow" id="right-arrow" src="img/icon/sidearrow.svg" /></a>
+              <a id="right-arrow-link" href="#"><img class="side-arrow" id="right-arrow" src="img/icon/sidearrow.svg" /></a>
             </div>
           </div>
         </div>
@@ -141,7 +135,6 @@
         let topPhotoBox = document.getElementById('top-photo-box');
         let navbar = document.getElementById('navbar');
         let testText = document.getElementById('tagline');
-
         // Set the margin-top of the top-photo-box to the inverse of the navbar's height
         topPhotoBox.style.marginTop = (0 - navbar.offsetHeight) + 'px';
       </script>
@@ -162,8 +155,5 @@
       </div>
     </footer>
 
-    <!-- Bootstrap Dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>

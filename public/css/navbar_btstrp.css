@@ -1,0 +1,51 @@
+.navbar {
+  transition: background-color .3s;
+}
+
+#nav-nametag {
+  font-size: 1rem;
+}
+
+.navbar-social {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  filter: brightness(0) invert(1);
+}
+
+#navbar-twitter {
+  height: 25px;
+  width: 25px;
+  margin-right: 1em;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.navbar-brand:hover {
+}
+
+.navbar-nav li a {
+   color: white;
+   font-size: 115%;
+ }
+
+.scrolled-navbar {
+  background-color: white;
+}
+
+.scrolled-navbar li a {
+  color: black;
+}
+
+.scrolled-navbar a {
+  color: black;
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1678px;
+        height: 84px;
+    }
+}
