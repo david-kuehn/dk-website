@@ -38,6 +38,26 @@ body {
   font-size: 120%;
 }
 
+.aboutme-content {
+  padding-top: 2em;
+}
+
+#profile-pic {
+  height: 150px;
+  width: 150px;
+  max-width: 300px;
+  max-height: 300px;
+  margin: 0 auto;
+  float: none;
+  display: block;
+}
+
+#aboutme {
+  padding: 1.5em;
+  font-size: 95%;
+  line-height: 2em;;
+}
+
 @media only screen and (min-width : 768px) {
   .tagline {
     font-size: 200%;
@@ -51,5 +71,27 @@ body {
   .aboutme-down img {
     height: 80px;
     width: 80px;
+  }
+
+  .aboutme-content {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+
+  #profile-pic {
+    height: 225px;
+    width: 225px;
+    max-width: 300px;
+    max-height: 300px;
+    float: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-55%);
+    margin-right: 2em;
+  }
+
+  #aboutme {
+    font-size: 100%;
+    line-height: 2em;
   }
 }

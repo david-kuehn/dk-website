@@ -48,6 +48,7 @@ $(document).ready(function () {
 
       // Change the color of all navbar text and icons
       $('.navbar-social').css({'filter': 'brightness(0)'});
+      $('.navbar-toggler-icon').css({'filter': 'brightness(0)'});
     }
 
     // If the scroll has been reduced
@@ -58,6 +59,7 @@ $(document).ready(function () {
 
       // Change the color of all navbar text and icons
       $('.navbar-social').css({'filter': 'brightness(0) invert(1)'});
+      $('.navbar-toggler-icon').css({'filter': 'brightness(0) invert(1)'});
     }
   });
 })
