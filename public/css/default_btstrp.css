@@ -2,6 +2,10 @@ body {
   font-family: 'Montserrat', sans-serif !important;
 }
 
+a {
+  text-decoration: none;
+}
+
 #top-photo-box {
   background: url(../img/photo/img1_alt.jpg);
   height: 100vh;
@@ -56,6 +60,45 @@ body {
   padding: 1.5em;
   font-size: 95%;
   line-height: 2em;;
+}
+
+#software-box {
+  background-color: #282828;
+  color: white;
+  text-align: center;
+  padding: 1.5em;
+}
+
+.software-panel {
+  padding: 2.5em 0;
+}
+
+.panel-header {
+  font-size: 210%;
+}
+
+.np-link {
+  color: white;
+  text-decoration: underline;
+}
+
+.np-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.panel-button-container {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#github-button {
+  color: white;
+  background-color: #282828;
+  padding: 1em 1em;
+  border:1px solid white;
+  border-radius: 6px;
+  transition: background-color .3s;
 }
 
 @media only screen and (min-width : 768px) {
