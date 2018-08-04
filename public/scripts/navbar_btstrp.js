@@ -25,7 +25,7 @@ $(document).ready(function () {
   });
 
   // When a link in the navbar is clicked
-  $('.nav-link').on('click', function (event) {
+  $('.nav-link.true').on('click', function (event) {
     // Don't do the default on-click action
     event.preventDefault();
 
@@ -38,8 +38,6 @@ $(document).ready(function () {
 
   // When the window is scrolled
   $(window).scroll(function () {
-    console.log('yup');
-
     // If the window has been scrolled more than 50px
     if ($(this).scrollTop() > 90 || isToggled == true) {
       // Assign the navbar a new style
