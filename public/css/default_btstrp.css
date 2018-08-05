@@ -110,6 +110,29 @@ a {
   text-decoration: none;
 }
 
+#freelance-box {
+  text-align: center;
+  background-color: #282828;
+  color: white;
+  padding: 1.5em;
+}
+
+#freelance-box > p {
+  margin: 3em 0;
+  font-size: 130%;
+  text-align: center;
+}
+
+#contact-button {
+  color: white;
+  background-color: #282828;
+  padding: 1em 1em;
+  border:1px solid white;
+  border-radius: 6px;
+  transition: background-color .3s;
+  text-decoration: none;
+}
+
 @media only screen and (min-width : 768px) {
   .tagline {
     font-size: 200%;
