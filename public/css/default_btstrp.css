@@ -68,6 +68,10 @@ a {
   padding: 1.5em;
 }
 
+.box-title {
+  text-align: center;
+}
+
 .software-panel {
   padding: 2.5em 0;
 }
@@ -151,6 +155,7 @@ a {
   .box-title {
     padding-top: 1em;
     margin-left: 3em;
+    text-align: left;
   }
 
   .software-panels-container {
