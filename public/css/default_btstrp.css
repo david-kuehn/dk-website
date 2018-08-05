@@ -189,6 +189,11 @@ a {
     padding: 0 2em;
     font-size: 120%;
     line-height: 1.5;
+    text-align: left;
+  }
+
+  .panel-header {
+    text-align: left;
   }
 
   .panel-button-container {
