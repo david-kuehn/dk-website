@@ -123,14 +123,24 @@ a {
   text-align: center;
 }
 
-#contact-button {
-  color: white;
-  background-color: #282828;
-  padding: 1em 1em;
-  border:1px solid white;
-  border-radius: 6px;
-  transition: background-color .3s;
-  text-decoration: none;
+#freelance-box > hr {
+  border-color: white;
+  width: 75%;
+  margin-bottom: 3em;
+}
+
+.contactme-down p {
+  margin: 0;
+}
+
+.contactme-down img {
+  height: 50px;
+  width: 50px;
+}
+
+.contactme-down {
+  text-align: center;
+  font-size: 150%;
 }
 
 @media only screen and (min-width : 768px) {
@@ -198,5 +208,9 @@ a {
 
   .panel-button-container {
     margin-top: 5em;
+  }
+
+  #freelance-box > hr {
+    width: 50%;
   }
 }
