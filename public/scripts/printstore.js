@@ -17,7 +17,7 @@ function createStoreItem (item, index) {
   let newItem = $(`<div class="store-item" id="store-item-${index}"></div>`);
   $('#store-content').append(newItem);
 
-  let itemLink = $('<a class="item-link" href="#"></a>');
+  let itemLink = $(`<a class="item-link" data-toggle="modal" data-printname="${item.title}" href="#purchase-modal"></a>`);
   $(`#store-item-${index}`).append(itemLink);
 
   // Creates and adds item's properties to item container
