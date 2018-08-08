@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="stylesheet" type="text/css" href="css/printstore.css">
+    <link rel="stylesheet" type="text/css" href="css/purchasemodal.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
 
@@ -93,7 +94,7 @@
                and photographer from the Chicago area. My goal is to be successful
                in both photography and software development, and I'm always looking
                for opportunities to bring me closer to reaching that goal.
-               I've worked on several independent projects and products which has
+               I've worked on several independent projects and products which have
                given me valuable experience that I hope to be able to use alongside
                my education. I specialize in object-oriented programming, aerial photography, and
                web development. I created this website to share my
@@ -118,7 +119,7 @@
 
           <div class="col-sm-4 software-panel">
             <h1 class="panel-header">Web</h1>
-            <p class="panel-info">2 years experience building responsive, mobile-first static sites and webapps with front-end technologies such as HTML, CSS, Javascript, jQuery, and Bootstrap, as well as back-end frameworks Node.js and Express.js</p>
+            <p class="panel-info">2 years experience building responsive, mobile-first static sites and webapps with front-end technologies such as HTML, CSS, Javascript, jQuery, and Bootstrap, as well as back-end frameworks Node.js and Express.js, and database MongoDB</p>
 
             <p class="notable-project">Notable Project: This Website</p>
           </div>
@@ -159,7 +160,7 @@
           <!-- Modal content-->
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" style="margin: 0 auto;">Purchase Print</h4>
+              <h4 class="modal-title">Purchase Print</h4>
               <button type="button" class="close ml-0" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
@@ -167,20 +168,29 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-6">
-                    <img id="purchase-modal-preview" />
+                    <img id="purchase-modal-preview" class="mb-3" />
                     <h1 id="purchase-modal-itemtitle"></h1>
+                    <small>BY DAVID KUEHN</small>
+                    <h4 id="purchase-modal-price"></h4>
                   </div>
                   <div class="col-sm-6">
-                    <div id="purchase-modal-finishselect">
-
+                    <div class="select-container">
+                      <p>FINISH</p>
+                      <select id="purchase-modal-finishselect" class="print-option-select">
+                        <option value="glossy" selected="selected">Glossy</option>
+                        <option value="metallic">Metallic</option>
+                      </select>
                     </div>
 
-                    <div id="purchase-modal-sizeselect">
-
+                    <div class="select-container">
+                      <p>SIZE</p>
+                      <select id="purchase-modal-sizeselect" class="print-option-select">
+                        <option value="8in x 10in" selected="selected">8in x 10in</option>
+                        <option value="16in x 20in">16in x 20in</option>
+                      </select>
                     </div>
 
-                    <h4 id="purchase-modal-price"></h4>
-                    <input type="text" id="purchase-modal-discountcode-input">
+                    <input type="text" id="purchase-modal-discountcode-input" placeholder="DISCOUNT CODE">
                     <button type="button" class="btn btn-primary">ADD TO CART</button>
                   </div>
                 </div>

@@ -1,0 +1,56 @@
+.modal-title {
+  margin: 0 auto;
+  transform: translate(13%, 10%);
+}
+
+.close {
+  font-size: 2.5em;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+#purchase-modal-preview {
+  box-shadow: 2px 2px 1px grey;
+}
+
+#purchase-modal-itemtitle {
+  margin: 0;
+}
+
+#purchase-modal-price {
+  margin-top: .5em;
+}
+
+#purchase-modal-discountcode-input {
+  margin: 1em 0;
+  -webkit-border-radius: 0px;
+}
+
+.select-container {
+  margin-top: 1.5em;
+}
+
+.select-container p {
+  font-size: 70%;
+  margin-bottom: 0.5em;
+
+}
+
+.print-option-select {
+  width: 100%;
+  text-align-last: center;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(../img/icon/selectarrows.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-color: transparent;
+  outline: none;
+}
