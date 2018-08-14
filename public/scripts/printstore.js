@@ -17,16 +17,13 @@ function createStoreItem (item, index) {
   let newItem = $(`<div class="store-item" id="store-item-${index}"></div>`);
   $('#store-content').append(newItem);
 
-  let itemLink = $(`<a class="item-link" data-toggle="modal" data-printname="${item.title}" href="#purchase-modal"></a>`);
-  $(`#store-item-${index}`).append(itemLink);
-
   // Creates and adds item's properties to item container
   let itemPreview = $(`<img class="item-preview" src="${item.previewImgURL}" />`);
-  $(`#store-item-${index} > .item-link`).append(itemPreview);
+  $(`#store-item-${index}`).append(itemPreview);
 
   // Create empty div for print's details below preview
   let itemDetailsDiv = $('<div class="item-details"></div>');
-  $(`#store-item-${index} > .item-link`).append(itemDetailsDiv);
+  $(`#store-item-${index}`).append(itemDetailsDiv);
 
   // Check if item is landscape
   if (item.landscape == "true") {
@@ -36,10 +33,7 @@ function createStoreItem (item, index) {
   }
 
   let itemTitle = $('<p class="item-title"></p>').text(item.title);
-  $(`#store-item-${index} > .item-link >.item-details`).append(itemTitle);
-
-  let itemPrice = $(`<p class="item-price">from $${item.price}</p>`);
-  $(`#store-item-${index} > .item-link >.item-details`).append(itemPrice);
+  $(`#store-item-${index} > .item-details`).append(itemTitle);
 }
 
 function controlScroll () {

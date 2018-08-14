@@ -143,6 +143,11 @@ a {
   font-size: 150%;
 }
 
+#photography-box > p {
+  text-align: center;
+  font-size: 12px;
+}
+
 @media only screen and (min-width : 768px) {
   .tagline {
     font-size: 200%;
