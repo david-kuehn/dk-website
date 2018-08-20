@@ -10,8 +10,6 @@ var connectionString = mongoUriBuilder({
 	database: 'dk-website'
 });
 
-console.log(connectionString);
-
 module.exports = {
   url: connectionString
 }
