@@ -39,40 +39,45 @@ MongoClient.connect(db.url, (err, database) => {
   app.get('/', function(req, res) {
     // Render the HTML
     res.render('index');
-
-    // If there is already a session
-    if (req.session.test) {
-      console.log(req.session.test);
-      req.session.save();
-    } else {  // If this is a new session
-      req.session.test = 1;
-      req.session.save();
-      res.end();
-    }
   });
 
-  app.get('/test', (req, res) => {
-    // If there is already a session
-    if (req.session.test){
-      req.session.test++;
-      console.log(req.session.test);
-      req.session.save();
-      res.end();
-    } else {  // If this is a new session
-      req.session.test = 1;
-      req.session.save();
-      res.end('welcome to the session demo. refresh!');
+  // When this route is reached, the API to get a cart's contents is reached
+  app.get('/api/cart/contents', (req, res) => {
+    // If there is not already a cart declared for the current session
+    if (!req.session.cart) {
+      // Declare an empty cart
+      req.session.cart = [];
     }
 
+    // Get and store the session's cart
+    const cart = req.session.cart;
+    res.send(cart);
   });
 
-  app.post('/test', (req, res) => {
-    let token = req.body.nonce;
-    if(Security.isValidNonce(token, req)) {
-      // OK
-    } else {
-      // Reject the request
+  // When data is posted to this route, the API to add an item to the cart is accessed
+  app.post('/api/cart/additem', (req, res) => {
+    // Declare a new object for the product being added
+    let product = {
+      name: req.body.name,
+      price: req.body.price,
+      quantity: req.body.quantity,
+      size: req.body.size,
+      finish: req.body.finish,
+      previewImage: req.body.imgPath
     }
+
+    // If there is not already a cart declared for the current session
+    if (!req.session.cart) {
+      // Declare an empty cart
+      req.session.cart = [];
+    }
+
+    // Add the new product to the cart
+    req.session.cart.push(product);
+
+    // Save the session and end the request
+    req.session.save();
+    res.end();
   });
 
   app.listen(process.env.PORT || 3000, () => console.log(`App listening on port ${process.env.PORT || 3000}!`));
