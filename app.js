@@ -82,10 +82,13 @@ MongoClient.connect(db.url, (err, database) => {
 
   // When data is posted to this route, the API to add an item to the cart is accessed
   app.post('/api/cart/removeitem', (req, res) => {
+<<<<<<< HEAD
     /////////////////////////////////////////////////////////////
     ////IMPORTANT: POST request MUST BE x-www-form-urlencoded////
     /////////////////////////////////////////////////////////////
 
+=======
+>>>>>>> 51dcf2b327ab114a75e838b66f88bb9987ceec2b
     // If there is not already a cart declared for the current session
     if (!req.session.cart) {
       // Declare an empty cart
@@ -103,8 +106,11 @@ MongoClient.connect(db.url, (err, database) => {
     res.end();
   });
 
+<<<<<<< HEAD
   //TODO: add route to clear cart
 
+=======
+>>>>>>> 51dcf2b327ab114a75e838b66f88bb9987ceec2b
   app.listen(process.env.PORT || 3000, () => console.log(`App listening on port ${process.env.PORT || 3000}!`));
 
   // Static files and directories
