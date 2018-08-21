@@ -80,6 +80,25 @@ MongoClient.connect(db.url, (err, database) => {
     res.end();
   });
 
+  // When data is posted to this route, the API to add an item to the cart is accessed
+  app.post('/api/cart/removeitem', (req, res) => {
+    // If there is not already a cart declared for the current session
+    if (!req.session.cart) {
+      // Declare an empty cart
+      req.session.cart = [];
+    }
+
+    // Store the index of the item to be removed
+    let itemIndex = req.body.itemIndex;
+
+    // Remove the item from the cart
+    req.session.cart.splice(itemIndex, 1);
+
+    // Save the session and end the request
+    req.session.save();
+    res.end();
+  });
+
   app.listen(process.env.PORT || 3000, () => console.log(`App listening on port ${process.env.PORT || 3000}!`));
 
   // Static files and directories
