@@ -19,6 +19,13 @@
   margin-right: 1em;
 }
 
+#navbar-cart-img {
+  height: auto;
+  width: auto;
+  max-height: 150px;
+  max-width: 150px;
+}
+
 .navbar-brand {
   color: white;
 }
