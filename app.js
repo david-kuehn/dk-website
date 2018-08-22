@@ -18,7 +18,7 @@ app.use(session({
   store: store,
   unset: 'destroy',
   name: 'session cookie name',
-  cookie: {maxAge: (15*60*1000)}
+  cookie: {maxAge: (120*60*1000)}
 }));
 
 // Enables use of body-parser
