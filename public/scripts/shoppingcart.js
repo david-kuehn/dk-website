@@ -30,16 +30,21 @@ function updateCartButton() {
   // Get cart items from HTML
   const cartLink = $('#navbar-cart-link');
   const cartIcon = $('#navbar-cart-img');
+  const cartIconNum = $('#navbar-cart-icon-number');
 
   // Get the contents of the cart from the database
   $.get('/api/cart/contents', function(data, status) {
     // If there are no items in the cart
     if (data.length > 0) {
-      cartLink.css({'pointer-events': 'auto'});
-      cartIcon.css({'opacity': '1'});
+      cartLink.css({ 'pointer-events': 'auto' });
+      cartIcon.css({ 'opacity': '1' });
+      cartIconNum.css({ 'opacity': '1' });
     } else {    // If there ARE items in the cart
-      cartLink.css({'pointer-events': 'none'});
-      cartIcon.css({'opacity': '0'});
+      cartLink.css({ 'pointer-events': 'none' });
+      cartIcon.css({ 'opacity': '0' });
+      cartIconNum.css({ 'opacity': '0' });
     }
+
+    cartIconNum.text(data.length);
   });
 }

@@ -12,7 +12,7 @@ $(document).ready(function() {
   controlScroll();
 });
 
-function createStoreItem (item, index) {
+function createStoreItem(item, index) {
   // Creates and adds item container to store
   let newItem = $(`<div class="store-item" id="store-item-${index}"></div>`);
   $('#store-content').append(newItem);
@@ -21,7 +21,7 @@ function createStoreItem (item, index) {
   $(`#store-item-${index}`).append(itemLink);
 
   // Creates and adds item's properties to item container
-  let itemPreview = $(`<img class="item-preview" src="${item.previewImgURL}" />`);
+  let itemPreview = $(`<img class="item-preview" src="${item.previewImgURL.substr(0, 24) + item.previewImgURL.charAt(24).toUpperCase() + item.previewImgURL.substr(25)}" />`);
   $(`#store-item-${index} > .item-link`).append(itemPreview);
 
   // Create empty div for print's details below preview
@@ -31,8 +31,8 @@ function createStoreItem (item, index) {
   // Check if item is landscape
   if (item.landscape == "true") {
     // Center the preview
-    itemPreview.css({'margin-top': '50px'});
-    itemDetailsDiv.css({'padding-top': '60px'});
+    itemPreview.css({ 'margin-top': '50px' });
+    itemDetailsDiv.css({ 'padding-top': '60px' });
   }
 
   let itemTitle = $('<p class="item-title"></p>').text(item.title);
@@ -42,7 +42,7 @@ function createStoreItem (item, index) {
   $(`#store-item-${index} > .item-link >.item-details`).append(itemPrice);
 }
 
-function controlScroll () {
+function controlScroll() {
   // Obtain and store necessary components
   const contentPanel = $('#store-content');
   const leftButton = $('#left-arrow-link');
@@ -84,15 +84,15 @@ function controlScroll () {
     contentPanel.animate({
       scrollLeft: contentPanel.scrollLeft() + $("#store-item-1").width()
     }, 500, function() {
-        // If it's not scrolled all the way left
-        if (contentPanel.scrollLeft() != 0) {
-          leftButton.removeClass('disabled-arrow');
-        }
+      // If it's not scrolled all the way left
+      if (contentPanel.scrollLeft() != 0) {
+        leftButton.removeClass('disabled-arrow');
+      }
 
-        // If it is scrolled all the way right (with a buffer of 15px)
-        if (contentPanel.scrollLeft() >= (contentPanel[0].scrollWidth - (contentPanel.width() + 25))) {
-          rightButton.addClass('disabled-arrow');
-        }
+      // If it is scrolled all the way right (with a buffer of 15px)
+      if (contentPanel.scrollLeft() >= (contentPanel[0].scrollWidth - (contentPanel.width() + 25))) {
+        rightButton.addClass('disabled-arrow');
+      }
     });
 
   });

@@ -19,6 +19,18 @@
   margin-right: 1em;
 }
 
+.cart-icon-cont {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    font-size: 97.9%;
+    top: 1.64px;
+    right: 7.4px;
+    opacity: 0;
+}
+
 #navbar-cart-img {
   height: auto;
   width: auto;
