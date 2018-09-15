@@ -25,9 +25,9 @@
 
 .top-right {
     position: absolute;
-    font-size: 97.9%;
-    top: 1.64px;
-    right: 7.4px;
+    font-size: 97%;
+    top: 1px;
+    right: 7.8px;
     opacity: 0;
 }
 
