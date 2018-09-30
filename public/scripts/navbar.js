@@ -13,6 +13,7 @@ $(document).ready(function() {
       // Change the color of all navbar text and icons
       $('.navbar-social').css({ 'filter': 'brightness(0)' });
       $('.navbar-toggler-icon').css({ 'filter': 'brightness(0)' });
+      $('#navbar-cart-icon-number').css({ 'color': 'white', 'font-weight': 'bolder' });
     } else {
       // Remove the style
       $('.navbar').removeClass('scrolled-navbar');
@@ -21,6 +22,7 @@ $(document).ready(function() {
       // Change the color of all navbar text and icons
       $('.navbar-social').css({ 'filter': 'brightness(0) invert(1)' });
       $('.navbar-toggler-icon').css({ 'filter': 'brightness(0) invert(1)' });
+      $('#navbar-cart-icon-number').css({ 'color': 'black', 'font-weight': 'normal' });
     }
   });
 

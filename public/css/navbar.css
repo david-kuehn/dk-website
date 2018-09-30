@@ -1,3 +1,7 @@
+body.modal-close {
+    overflow: visible;
+}
+
 .navbar {
   transition: background-color .3s;
 }
