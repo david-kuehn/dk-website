@@ -9,7 +9,7 @@ $(document).ready(function() {
     // Create a new object with the data of the item being added
     const productData = {
       name: $('#purchase-modal-itemtitle').text(),
-      price: $('#purchase-modal-price').text(),
+      price: $('#purchase-modal-price').text().split('$')[1],
       quantity: 1,
       size: $('#purchase-modal-sizeselect').find(":selected").text(),
       finish: $('#purchase-modal-finishselect').find(":selected").text(),

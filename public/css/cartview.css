@@ -1,0 +1,25 @@
+.cart-item {
+  padding: 1.5em 0;
+}
+
+.cart-small-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 110%;
+}
+
+.cart-title-preview-cont > * {
+  margin: 0;
+}
+
+.cart-item-preview {
+    width: 107px;
+    height: auto;
+    box-shadow: 2px 2px 1px grey;
+}
+
+.cart-item-title {
+    font-size: 140%;
+}
