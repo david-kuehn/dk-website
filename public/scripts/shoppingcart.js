@@ -13,7 +13,7 @@ $(document).ready(function() {
       quantity: 1,
       size: $('#purchase-modal-sizeselect').find(":selected").text(),
       finish: $('#purchase-modal-finishselect').find(":selected").text(),
-      previewImage: $('#purchase-modal-preview').prop('src')
+      imgPath: $('#purchase-modal-preview').prop('src')
     };
 
     // Store the POST request in a variable
