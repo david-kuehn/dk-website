@@ -15,11 +15,16 @@
 }
 
 .cart-item-preview {
-    width: 107px;
-    height: auto;
-    box-shadow: 2px 2px 1px grey;
+  width: 107px;
+  height: auto;
+  box-shadow: 2px 2px 1px grey;
+}
+
+.remove-item-link {
+  margin-top: 0.5em;
+  color: rgb(175, 175, 175) !important;
 }
 
 .cart-item-title {
-    font-size: 140%;
+  font-size: 140%;
 }

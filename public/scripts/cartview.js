@@ -30,5 +30,6 @@ function createCartItem(item, index) {
   $(`#cart-item-${index} > .container-fluid > .row > .cart-title-preview-cont`).append($('<p class="cart-item-title"></p>').text(item.name));
   $(`#cart-item-${index} > .container-fluid > .row > .cart-title-preview-cont`).append($('<p class="cart-item-size"></p>').text(item.size));
   $(`#cart-item-${index} > .container-fluid > .row > .cart-title-preview-cont`).append($('<p class="cart-item-finish"></p>').text(item.finish));
+  $(`#cart-item-${index} > .container-fluid > .row > .cart-title-preview-cont`).append($('<a class="remove-item-link">REMOVE</a>'));
   $(`#cart-item-${index} > .container-fluid > .row > .cart-price-preview-cont`).append($(`<p class="cart-item-price">$${item.price}</p>`));
 }
