@@ -1,19 +1,22 @@
 $(document).ready(function() {
 
   $('#navbar-cart-link').click(function () {
-    // Get an array of the store items from the API
-    $.get('/api/cart/contents', function(data, status) {
-
-      $('.cart-view-item-container').empty();
-
-      // For each item in the data
-      for (i = 0; i < data.length; i++) {
-        createCartItem(data[i], i);
-      }
-    });
+    populateCart();
   });
-
 });
+
+function populateCart () {
+  // Get an array of the store items from the API
+  $.get('/api/cart/contents', function(data, status) {
+
+    $('.cart-view-item-container').empty();
+
+    // For each item in the data
+    for (i = 0; i < data.length; i++) {
+      createCartItem(data[i], i);
+    }
+  });
+}
 
 function createCartItem(item, index) {
   let newCartItem = $(`<div class="cart-item" id="cart-item-${index}"></div>`);
@@ -30,6 +33,6 @@ function createCartItem(item, index) {
   $(`#cart-item-${index} > .container-fluid > .row > .cart-title-preview-cont`).append($('<p class="cart-item-title"></p>').text(item.name));
   $(`#cart-item-${index} > .container-fluid > .row > .cart-title-preview-cont`).append($('<p class="cart-item-size"></p>').text(item.size));
   $(`#cart-item-${index} > .container-fluid > .row > .cart-title-preview-cont`).append($('<p class="cart-item-finish"></p>').text(item.finish));
-  $(`#cart-item-${index} > .container-fluid > .row > .cart-title-preview-cont`).append($('<a class="remove-item-link">REMOVE</a>'));
+  $(`#cart-item-${index} > .container-fluid > .row > .cart-title-preview-cont`).append($(`<a href="javascript:void(0)" onclick="removeCartItemButton(${index});" class="remove-item-link">REMOVE</button>`));
   $(`#cart-item-${index} > .container-fluid > .row > .cart-price-preview-cont`).append($(`<p class="cart-item-price">$${item.price}</p>`));
 }
