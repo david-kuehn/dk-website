@@ -93,8 +93,6 @@ MongoClient.connect(db.url, (err, database) => {
     ////IMPORTANT: POST request MUST BE x-www-form-urlencoded////
     /////////////////////////////////////////////////////////////
 
-    console.log('received');
-
     // If there is not already a cart declared for the current session
     if (!req.session.cart) {
       // Declare an empty cart

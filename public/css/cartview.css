@@ -23,6 +23,7 @@
 .remove-item-link {
   margin-top: 0.5em;
   color: rgb(175, 175, 175) !important;
+  font-size: 80%;
 }
 
 .cart-item-title {
