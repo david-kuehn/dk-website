@@ -23,6 +23,11 @@ body.modal-close {
   margin-right: 1em;
 }
 
+#navbar-snap {
+  height: 25px;
+  width: 25px;
+}
+
 .cart-icon-cont {
     position: relative;
 }
